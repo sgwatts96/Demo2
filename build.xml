@@ -1,4 +1,4 @@
-<project name="Steves Jenkins CI Setup" basedir="../../" xmlns:sf="antlib:com.salesforce">
+<project name="Steves Jenkins CI Setup" basedir="." xmlns:sf="antlib:com.salesforce">
 
 	<!--  reference to force.com migration tool  -->
 	<taskdef uri="antlib:com.salesforce" resource="com/salesforce/antlib.xml" classpath="./lib/ant-salesforce.jar"/>
