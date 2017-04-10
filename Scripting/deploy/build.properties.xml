@@ -5,3 +5,4 @@
 sf.maxPoll = 500
 sf.pollWaitMillis = 5000
 sf.runAllTests = false
+src.dir	= ${basedir}/../../src
