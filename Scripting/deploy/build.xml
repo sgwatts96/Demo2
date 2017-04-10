@@ -14,7 +14,7 @@
 		<sf:deploy username="${sf_deploy_username}"
 			password="${sf_deploy_password}"
 			serverurl="${sf_deploy_url}"
-			deployRoot="${src.dir}"
+			deployRoot="${src_dir}"
 			maxPoll="${sf.maxPoll}"
 			pollWaitMillis="${sf.pollWaitMillis}"/>
 	</target>
