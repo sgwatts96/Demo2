@@ -1,0 +1,54 @@
+<project name="Steves Jenkins CI Setup" basedir="../../" xmlns:sf="antlib:com.salesforce">
+
+	<!--  reference to force.com migration tool  -->
+	<taskdef uri="antlib:com.salesforce" resource="com/salesforce/antlib.xml" classpath="./Scripting/lib/ant-salesforce.jar"/>
+
+	<!-- ========================================== -->
+	<!-- ========================================== -->
+	<!-- Default properties			 -->
+	<!-- ========================================== -->
+	<property file="./Scripting/deploy/build.properties"/>
+
+	<!-- Deploy Metadata -->
+	<target name="metadata_deploy">
+		<sf:deploy username="${sf_deploy_username}"
+			password="${sf_deploy_password}"
+			serverurl="${sf_deploy_url}"
+			deployRoot="${src_dir}"
+			maxPoll="${sf.maxPoll}"
+			pollWaitMillis="${sf.pollWaitMillis}"/>
+	</target>
+
+	<!-- Deploy Managed Components -->
+	<target name="metadata_deploy_mp_changes">
+		<sf:deploy username="${sf_deploy_username}"
+			password="${sf_deploy_password}"
+			serverurl="${sf_deploy_url}"
+			deployRoot="${src_dir_mp_changes}"
+			maxPoll="${sf.maxPoll}"
+			pollWaitMillis="${sf.pollWaitMillis}"/>
+	</target>
+
+	<!-- Run all tests -->
+	<target name="runAllTests">
+		<sf:deploy username="${sf_deploy_username}"
+			password="${sf_deploy_password}"
+			serverurl="${sf_deploy_url}"
+			deployRoot="${src_dir}"
+			maxPoll="${sf.maxPoll}"
+			pollWaitMillis="${sf.pollWaitMillis}"
+			checkOnly="true"
+			testLevel="RunLocalTests"/>
+	</target>
+
+	<!-- Validate Deployment -->
+	<target name="validate_deploy">
+		<sf:deploy username="${sf_deploy_username}"
+			password="${sf_deploy_password}"
+			serverurl="${sf_deploy_url}"
+			deployRoot="${src_dir}"
+			maxPoll="${sf.maxPoll}"
+			pollWaitMillis="${sf.pollWaitMillis}"
+			checkOnly="true"/>
+	</target>
+</project>
