@@ -9,15 +9,16 @@
 	<!-- Load Resources -->
 	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
 		<classpath>
-			<pathelement location="${dir.library}/ant-salesforce-api-${sf.apiversion}.jar" />
+			<pathelement location="${dir.library}/ant-salesforce.jar" />
 		</classpath>
 	</taskdef>
 
+	<!--
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
 		<classpath>
 			<pathelement location="${dir.library}/ant-contrib-1.0b2.jar"/>
 		</classpath>
-	</taskdef>
+	</taskdef>-->
 
 	<target name="deploy_setup_params">
 		<input message="Salesforce username:" addproperty="sf.username" />
