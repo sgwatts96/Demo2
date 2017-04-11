@@ -9,14 +9,14 @@
 	<!-- Load Resources -->
 	<taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
 		<classpath>
-			<pathelement location="/build/lib/ant-salesforce.jar" />
+			<pathelement location="./build/lib/ant-salesforce.jar" />
 		</classpath>
 	</taskdef>
 
 	
 	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
 		<classpath>
-			<pathelement location="/build/lib/ant-contrib-1.0b2.jar"/>
+			<pathelement location="./build/lib/ant-contrib-1.0b2.jar"/>
 		</classpath>
 	</taskdef>
 
