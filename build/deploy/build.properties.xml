@@ -2,5 +2,5 @@ sf.username = jenkins@postnl.nl
 sf.maxPoll = 10000
 sf.pollWaitMillis = 10000
 sf.apiversion = 38.0
-dir.library						= ${basedir}/../lib
+dir.library						= ${basedir}/build/lib
 src.dir							= ${basedir}/../../src
