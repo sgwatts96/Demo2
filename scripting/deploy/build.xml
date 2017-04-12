@@ -7,7 +7,7 @@
 	<!-- ========================================== -->
 	<!-- Default properties			 -->
 	<!-- ========================================== -->
-	<property file="./Scripting/deploy/build.properties"/>
+	<property file="./scripting/deploy/build.properties"/>
 
 	<!-- Deploy Metadata -->
 	<target name="metadata_deploy">
